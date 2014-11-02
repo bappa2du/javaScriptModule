@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Sample work</title>
+</head>
+<body>
+	Name:<input type='text' id='name'/><br>
+	Password:<input type='password' id='password'/><br>
+	<input type='submit' value='Send'/>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function()
+		{
+			$('#name').keyup(function()
+			{
+				if($('#name').val().length > 6)
+				{
+					$('#password').prop('disabled',true);
+				}
+				else
+				{
+					$('#password').prop('disabled',false);
+				}
+			})
+		});
+	</script>
+</body>
+</html>
