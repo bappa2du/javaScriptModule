@@ -29,17 +29,22 @@ var flightPath=new google.maps.Polyline({
   });
 
 flightPath.setMap(map);
-var marker=new google.maps.Marker({
+var dhaka1=new google.maps.Marker({
   position:dhaka,
-  animation:google.maps.Animation.BOUNCE
+  // animation:google.maps.Animation.BOUNCE
   });
-var marker1=new google.maps.Marker({
+var london1=new google.maps.Marker({
   position:london,
-  animation:google.maps.Animation.BOUNCE
+  // animation:google.maps.Animation.BOUNCE
   });
 
-marker.setMap(map);
-marker1.setMap(map);
+dhaka1.setMap(map);
+london1.setMap(map);
+var infowindow = new google.maps.InfoWindow({
+  content:"Tappware solution"
+  });
+
+infowindow.open(map,dhaka1);
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
