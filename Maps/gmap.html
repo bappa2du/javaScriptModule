@@ -31,9 +31,11 @@ var flightPath=new google.maps.Polyline({
 flightPath.setMap(map);
 var marker=new google.maps.Marker({
   position:dhaka,
+  animation:google.maps.Animation.BOUNCE
   });
 var marker1=new google.maps.Marker({
   position:london,
+  animation:google.maps.Animation.BOUNCE
   });
 
 marker.setMap(map);
