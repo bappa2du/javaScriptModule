@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>DEMO</title>
+</head>
+<body>
+
+	<select name="dest" onchange="window.open(this.options[this.selectedIndex].value,'myIFrame')">
+    <option>Choose a destination for your IFrame!</option>
+    <option value="http://www.yahoo.com/">YAHOO</option>
+    <option value="http://www.google.com/">GOOGLE</option>
+    <option value="http://www.altavista.com/">ALTAVISTA</option>
+    <option value="http://www.amazon.com/">AMAZON</option>
+    <option value="http://artlung.com/">ARTLUNG</option>
+	</select>
+	</form>
+
+	<iframe src="http://joecrawford.com/" name="myIFrame" width="400" height="200">
+	    You can't see this because your browser does not support iframes.
+	</iframe>
+	
+</body>
+</html>
