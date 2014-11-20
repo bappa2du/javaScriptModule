@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>DEMO</title>
+</head>
+<body>
+
+	<!--the onchange value below must all be on one line-->
+
+	<select name="myDestination"
+	    onchange="this.form.WINDOW_NAMER.value++;
+	    ob=this.form.myDestination;
+	    window.open(ob.options[ob.selectedIndex].value
+	    ,'Window_Name'+this.form.WINDOW_NAMER.value,
+	    'toolbar=1,location=1,directories=1,status=1,menubar=1,scrollbars=1,resizable=1,width=400,height=300')">
+	    <option>Choose a destination to open in a attribute-controlled popup window!</option>
+	    <option value="http://www.yahoo.com/">YAHOO</option>
+	    <option value="http://www.google.com/">GOOGLE</option>
+	    <option value="http://www.altavista.com/">ALTAVISTA</option>
+	    <option value="http://www.amazon.com/">AMAZON</option>
+	    <option value="http://artlung.com/">ARTLUNG</option>
+	</select>
+
+	<!-- HIDDEN VARIABLE SO WE PROVIDE UNIQUE NAMES FOR THESE NEW WINDOWS -->
+	<!-- THUS AVOIDING THE "WHERE'S THAT WINDOW" PHENOMENON -->
+	
+	<input name="WINDOW_NAMER" type="HIDDEN" value="1">
+
+
+</body>
+</html>
