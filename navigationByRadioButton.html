@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>DEMO</title>
+</head>
+<body>
+
+    <p>
+    	<b>Choose a destination:</b>
+    	<br>
+	    <input type="RADIO" value="http://www.yahoo.com/"     name="userChoice" id="navRadio01">
+        <label for="navRadio01">YAHOO</label><br>
+
+	    <input type="RADIO" value="http://www.google.com/"    name="userChoice" id="navRadio02">
+        <label for="navRadio02">GOOGLE</label><br>
+
+	    <input type="RADIO" value="http://www.altavista.com/" name="userChoice" id="navRadio03">
+        <label for="navRadio03">ALTAVISTA</label><br>
+
+	    <input type="RADIO" value="http://www.amazon.com/"    name="userChoice" id="navRadio04">
+        <label for="navRadio04">AMAZON</label><br>
+
+	    <input type="RADIO" value="http://artlung.com/"       name="userChoice" id="navRadio05">
+        <label for="navRadio05">ARTLUNG</label><br>
+
+		<--the onclick value below must all be on one line-->
+		<input type="BUTTON"
+		    value="Go there!"
+		    onclick="ob=this.form.userChoice;for(i=0;i<ob.length;i++){
+		    if(ob[i].checked){window.open(ob[i].value,'_top');};}">
+	</p>
+</body>
+</html>
